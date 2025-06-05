@@ -1,5 +1,4 @@
 import java.util.Stack;
-
 class Solution {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
@@ -14,10 +13,9 @@ class Solution {
             } else if (ch == ']' && !stack.isEmpty() && stack.peek() == '[') {
                 stack.pop();
             } else {
-                return false; // mismatch or stack is empty
+                return false; 
             }
         }
-        
-        return stack.isEmpty(); // valid if all brackets matched
+           return stack.isEmpty(); 
     }
 }
